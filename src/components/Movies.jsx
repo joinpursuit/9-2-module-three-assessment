@@ -1,20 +1,4 @@
-import { useEffect, useState } from "react"
-
-const films_json = "/films.json";
-
-export default function Movies() {
-
-    const [allMovies, setAllMovies] = useState([])
-
-    const [selectedMovie, setSelectedMovie] = useState("")
-
-    useEffect(() => {
-        fetch(films_json)
-            .then(res => res.json())
-        .then(setAllMovies)
-}, [])
-
-    // console.log(allMovies)
+export default function Movies({allMovies, selectedMovie, setSelectedMovie}) {
 
     function handleChange(e) {
         setSelectedMovie(e.target.value)
@@ -24,7 +8,6 @@ export default function Movies() {
 
     function filteredMovie() {
         const chosenMovie = allMovies.filter((movie) => movie.title === selectedMovie)
-        // console.log("yes")
         console.log(chosenMovie)
 
         if (allMovies) {
@@ -66,7 +49,6 @@ export default function Movies() {
             </select>
             <div>
                 <h2>
-                    {/* {selectedMovie} */}
                    { filteredMovie()}
                 </h2>
                 
