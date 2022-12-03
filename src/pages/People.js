@@ -1,3 +1,56 @@
+import { useState } from "react";
+import { useFetch } from "../hooks/useFetch";
+
 export default function People() {
-  return <div>People</div>;
+  const { data: people, isPending, error } = useFetch("/people.json");
+  const [person, setPerson] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const selected = e.target.name.value;
+    const found = people.find(
+      (person) => person.name.toLowerCase() === selected.trim().toLowerCase()
+    );
+    e.target.reset();
+    found ? setPerson(found) : setPerson("");
+  };
+
+  return (
+    <section className="people">
+      <h2>Search for a Person</h2>
+      {isPending && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      {people && (
+        <form onSubmit={handleSubmit}>
+          <label>
+            <input name="name" type="text" />
+          </label>
+          <button>SUBMIT</button>
+        </form>
+      )}
+
+      {person && (
+        <aside>
+          <h3>Name:{person.name}</h3>
+          <p>
+            <span>Age:</span>
+            {person.age}
+          </p>
+          <p>
+            <span>Eye Color:</span>
+            {person.eye_color}
+          </p>
+          <p>
+            <span>Hair Color:</span>
+            {person.hair_color}
+          </p>
+        </aside>
+      )}
+      {person === "" && (
+        <div className="found-person">
+          <p>Not found!</p>
+        </div>
+      )}
+    </section>
+  );
 }
