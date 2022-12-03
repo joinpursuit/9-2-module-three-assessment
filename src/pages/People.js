@@ -5,14 +5,14 @@ import Person from "../components/Person";
 export default function People() {
   const { data: people, isPending, error } = useFetch("/people.json");
   const [person, setPerson] = useState(null);
+  const [name, setName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const selected = e.target.name.value;
     const found = people.find(
-      (person) => person.name.toLowerCase() === selected.trim().toLowerCase()
+      (person) => person.name.toLowerCase() === name.trim().toLowerCase()
     );
-    e.target.reset();
+    setName("");
     found ? setPerson(found) : setPerson("");
   };
 
@@ -24,7 +24,12 @@ export default function People() {
       {people && (
         <form onSubmit={handleSubmit}>
           <label>
-            <input name="name" type="text" />
+            <input
+              name="name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </label>
           <button>SUBMIT</button>
         </form>

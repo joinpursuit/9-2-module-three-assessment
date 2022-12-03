@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
+import LocationList from "../components/LocationList";
 
 export default function Locations() {
   const { data: locations, isPending, error } = useFetch("/locations.json");
@@ -12,32 +13,16 @@ export default function Locations() {
       {isPending && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {locations && (
-        <button onClick={() => setShowLocations(!showLocations)}>
-          {showLocations ? "Hide" : "Show"} Locations
-        </button>
+        <div className="btn-wrapper">
+          <button onClick={() => setShowLocations(!showLocations)}>
+            {showLocations ? "Hide" : "Show"} Locations
+          </button>
+          <button>Sort By Name</button>
+          <button>Sort By Climate</button>
+          <button>Sort By Terrain</button>
+        </div>
       )}
-      {showLocations && (
-        <ul>
-          {locations.map((location) => (
-            <li key={location.name}>
-              <ul className="details">
-                <li>
-                  <span>Name:</span>
-                  {location.name}
-                </li>
-                <li>
-                  <span>Climate:</span>
-                  {location.climate}
-                </li>
-                <li>
-                  <span>Terrain:</span>
-                  {location.terrain}
-                </li>
-              </ul>
-            </li>
-          ))}
-        </ul>
-      )}
+      {showLocations && <LocationList locations={locations} />}
     </section>
   );
 }
