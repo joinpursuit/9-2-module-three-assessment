@@ -117,6 +117,8 @@ console.log(masterState)
 
   return (
     <div className="locations">
+                <h1>List of Locations</h1>
+
       <button onClick={handleHide}>
         {" "}
         {hide ? "Hide Locations" : "Show Locations"}

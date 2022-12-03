@@ -29,9 +29,11 @@ function Movies() {
 
   return (
     <div className="movies">
+                <h1>Select a Movie</h1>
+
         
       <select           onChange={handleOnChange}>
-        <option value="SelectGhibliTitle">Select Movie Title</option>
+        <option value="SelectGhibliTitle"></option>
         {data.map((ghibliData) => {
           return (
             <option value={ghibliData.title} key={ghibliData.title}>

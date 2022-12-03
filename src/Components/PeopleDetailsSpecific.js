@@ -1,9 +1,11 @@
+
+
 function PeopleDetailsSpecific({ data, people }) {
     console.log(data);
   
     return (
       <div>
-        {data.map((renderDetails,index) => {
+        { data.map((renderDetails,index) => {
           if ((people.toLowerCase()).includes(((renderDetails.name).toLowerCase()))) {
             return (
               <div key={index}>
