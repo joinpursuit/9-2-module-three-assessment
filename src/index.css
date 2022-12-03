@@ -53,31 +53,34 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 0;
+  gap: 10px;
 }
 
 .locations ul > li {
   background: lemonchiffon;
   width: 26%;
-  padding: 2em;
+  padding: 2em 5px;
 }
 
 .locations ul > li > ul {
   margin-left: 0;
+  margin: 0 auto;
   list-style: none;
+  box-sizing: border-box;
 }
 
 .locations ul > li > ul li {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 8px;
   background: ghostwhite;
   display: flex;
-  flex-wrap: no-wrap;
-  width: 90%;
-  justify-content: center;
 }
 
 .locations ul > li > ul li span {
   text-align: center;
   display: inline-block;
-  width: 100%;
+  width: 50%;
 }
 .details li {
   list-style: none;
@@ -132,4 +135,8 @@ ul li::marker {
 
 .movie img {
   height: 500px;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
+import Person from "../components/Person";
 
 export default function People() {
   const { data: people, isPending, error } = useFetch("/people.json");
@@ -28,29 +29,7 @@ export default function People() {
           <button>SUBMIT</button>
         </form>
       )}
-
-      {person && (
-        <aside>
-          <h3>Name:{person.name}</h3>
-          <p>
-            <span>Age:</span>
-            {person.age}
-          </p>
-          <p>
-            <span>Eye Color:</span>
-            {person.eye_color}
-          </p>
-          <p>
-            <span>Hair Color:</span>
-            {person.hair_color}
-          </p>
-        </aside>
-      )}
-      {person === "" && (
-        <div className="found-person">
-          <p>Not found!</p>
-        </div>
-      )}
+      <Person person={person} />
     </section>
   );
 }
