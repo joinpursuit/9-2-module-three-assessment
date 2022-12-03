@@ -19,7 +19,7 @@ export default function PeoplePage() {
 
     function getSelectedPerson() {
        const personArr = people.filter(p => {
-            return p.name.toLowerCase() == search.toLowerCase()
+            return p.name.toLowerCase() === search.toLowerCase()
         });
         if (personArr.length > 0) {
             setNotFound(false);
