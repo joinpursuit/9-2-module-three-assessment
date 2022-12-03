@@ -154,7 +154,7 @@ select {
 }
 
 .home img {
-  width: 70%;
+  width: 67.5%;
 }
 
 .img-wrapper {
@@ -204,4 +204,11 @@ main {
 select {
   display: block;
   margin: 0 auto;
+}
+
+.swiper-wrapper {
+  margin-bottom: 40px;
+}
+.swiper-wrapper h2 {
+  margin-top: 20px;
 }
