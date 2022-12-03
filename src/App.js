@@ -16,7 +16,7 @@ function App() {
       .then(setFilms);
   }, []);
 
-  console.log(films);
+  // console.log(people);
   return (
     <div className="app">
       <Router>

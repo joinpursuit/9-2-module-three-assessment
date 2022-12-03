@@ -2,19 +2,18 @@ import React from "react";
 import { useState } from "react";
 
 export default function Movies({ films }) {
-  const [filmDetails, setFilmDetails] = useState("");
+  const [userSelection, setUserSelection] = useState("");
 
   function handleChange(e) {
     e.preventDefault();
-    setFilmDetails(e.target.value);
+    setUserSelection(e.target.value);
   }
 
-  let filterFilms = films.filter((film) => film.title === filmDetails)
+  let filterByTitle = films.filter((film) => film.title === userSelection);
 
-  console.log();
   return (
     <div className="movies">
-      <h5>Select a Movie</h5>
+      <h1>Select a Movie</h1>
       <select onChange={handleChange}>
         <option value=""></option>
         {films.map((film) => {
@@ -25,16 +24,21 @@ export default function Movies({ films }) {
           );
         })}
       </select>
-      {filterFilms.map((film) => {
+      {filterByTitle.map((film) => {
         return (
-          <article>
-            <p><strong>Title:</strong> {film.title}</p>
-            <p><strong>Release Date:</strong> {film.release_date}</p>
-            <p><strong>Description:</strong> {film.description}</p>
-          </article>
-        )
-      })
-    }
+          <aside>
+            <h3>
+              <strong>Title:</strong> {film.title}
+            </h3>
+            <p>
+              <strong>Release Date:</strong> {film.release_date}
+            </p>
+            <p>
+              <strong>Description:</strong> {film.description}
+            </p>
+          </aside>
+        );
+      })}
     </div>
   );
 }
