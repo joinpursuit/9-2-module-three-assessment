@@ -5,6 +5,13 @@ import LocationList from "../components/LocationList";
 export default function Locations() {
   const { data: locations, isPending, error } = useFetch("/locations.json");
   const [showLocations, setShowLocations] = useState(false);
+  const [sortBy, setSortBy] = useState("");
+
+  function sortLocation() {
+    return !sortBy
+      ? locations
+      : locations.sort((a, b) => (a[sortBy] > b[sortBy] ? 1 : -1));
+  }
 
   return (
     <section className="locations">
@@ -17,12 +24,21 @@ export default function Locations() {
           <button onClick={() => setShowLocations(!showLocations)}>
             {showLocations ? "Hide" : "Show"} Locations
           </button>
-          <button>Sort By Name</button>
-          <button>Sort By Climate</button>
-          <button>Sort By Terrain</button>
+
+          {showLocations && (
+            <>
+              <button onClick={() => setSortBy("name")}>Sort By Name</button>
+              <button onClick={() => setSortBy("climate")}>
+                Sort By Climate
+              </button>
+              <button onClick={() => setSortBy("terrain")}>
+                Sort By Terrain
+              </button>
+            </>
+          )}
         </div>
       )}
-      {showLocations && <LocationList locations={locations} />}
+      {showLocations && <LocationList locations={sortLocation()} />}
     </section>
   );
 }
