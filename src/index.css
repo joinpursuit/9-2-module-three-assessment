@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 nav {
@@ -167,4 +168,40 @@ select {
   width: 70%;
   height: auto;
   margin: 20px auto;
+}
+nav {
+  margin-bottom: 0;
+}
+main {
+  margin-top: 0;
+}
+.movie-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.movie-list li {
+  border: 2px solid rgb(91, 28, 230);
+  border-radius: 5px;
+}
+
+.movie-list li:hover {
+  cursor: pointer;
+}
+
+.movie-list li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: rgb(91, 28, 230);
+}
+
+.movies #default-img {
+  width: 50%;
+}
+
+select {
+  display: block;
+  margin: 0 auto;
 }
