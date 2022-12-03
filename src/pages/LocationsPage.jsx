@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import LocationCard from "../Components/LocationCard"
 
 export default function LocationsPage() {
     const [clicked, setClicked] = useState(false)
@@ -50,24 +51,18 @@ export default function LocationsPage() {
     }, [])
 
   return (
-    <div className='locations'>
-        <h2>List of Locations</h2>
+    <section className='locations'>
+        <h1>List of Locations</h1>
         <button onClick={handleClick}>{clicked ? "Hide Locations" : "Show Locations"}</button>
         <button onClick={handleSortByName}>Sort by Name</button>
         <button onClick={handleSortByClimate}>Sort by Climate</button>
         <button onClick={handleSortByTerrain}>Sort by Terrain</button>
-        <ul>
-            {clicked ? locations.map(location => {
+        <ul className="details">
+            {clicked ? locations.map((location, i) => {
                 return (
-                <li key={location.id}>
-                    <ul>
-                        <li>Name: {location.name}</li>
-                        <li>Climate: {location.climate}</li>
-                        <li>Terrain: {location.terrain}</li>
-                    </ul>
-                </li>
+                    <li key={location.id}><LocationCard location={location} /></li>
             )}) : null }
         </ul>
-    </div>
+    </section>
   )
 }
