@@ -20,7 +20,6 @@ export default function LocationsPage() {
             if (locationA.name < locationB.name) return -1
             return 0
         })
-        console.log(locationsCopy)
         setLocations(locationsCopy);
     }
 
@@ -31,7 +30,6 @@ export default function LocationsPage() {
             if (locationA.climate < locationB.climate) return -1
             return 0
         })
-        console.log(locationsCopy)
         setLocations(locationsCopy);
     }
 
@@ -42,7 +40,6 @@ export default function LocationsPage() {
             if (locationA.terrain < locationB.terrain) return -1
             return 0
         })
-        console.log(locationsCopy)
         setLocations(locationsCopy);
     }
 
