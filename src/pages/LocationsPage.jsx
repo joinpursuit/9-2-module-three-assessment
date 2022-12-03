@@ -25,13 +25,15 @@ export default function LocationsPage() {
         <button onClick={handleClick}>{clicked ? "Hide Locations" : "Show Locations"}</button>
         <ul>
             {clicked ? locations.map(location => {
-                return <ul key={location.id}>
-                    <li>Name: {location.name}</li>
-                    <li>Climate: {location.climate}</li>
-                    <li>Terrain: {location.terrain}</li>
-                    
-                </ul>
-            }) : null }
+                return (
+                <li key={location.id}>
+                    <ul>
+                        <li>Name: {location.name}</li>
+                        <li>Climate: {location.climate}</li>
+                        <li>Terrain: {location.terrain}</li>
+                    </ul>
+                </li>
+            )}) : null }
         </ul>
     </div>
   )
