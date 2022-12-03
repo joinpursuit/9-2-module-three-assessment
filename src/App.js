@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import NavBar from "./Components/NavBar";
 import MoviesPage from "./pages/MoviesPage";
 import PeoplePage from "./pages/PeoplePage";
+import LocationsPage from "./pages/LocationsPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/people" element={<PeoplePage />} />
+          <Route path="/locations" element={<LocationsPage />} />
         </Routes>
       </Router>
     </div>
