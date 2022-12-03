@@ -46,14 +46,14 @@ export default function PeoplePage() {
     }, [])
 
   return (
-    <div className='people'>
+    <section className='people'>
         <h2>Search for a Person</h2>
       <form>
         <input type="text" value={search} onChange={(e) => handleChange(e)} />
         <button onClick={(e) => handleSubmit(e)}>Submit</button>
       </form>
       {selectedPerson ? <PersonCard person={selectedPerson} /> : null}
-      {notFound ? <p>Not found.</p> : null}
-    </div>
+      {notFound ? <p>Not Found</p> : null}
+    </section>
   )
 }

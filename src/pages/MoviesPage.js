@@ -26,7 +26,7 @@ export default function MoviesPage() {
 
   return (
     <section className="movies">
-      <h2>Select a Movie</h2>
+      <h1>Select a Movie</h1>
       <select
         name="movies"
         id="movie-select"
