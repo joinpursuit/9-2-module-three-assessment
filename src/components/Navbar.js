@@ -7,7 +7,7 @@ export default function Navbar() {
       </Link>
       <Link to="/movies">Movies</Link>
       <Link to="/people">People</Link>
-      <Link to="/Locations">Locations</Link>
+      <Link to="/locations">Locations</Link>
     </nav>
   );
 }

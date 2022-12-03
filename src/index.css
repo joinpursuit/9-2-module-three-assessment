@@ -151,3 +151,20 @@ select {
   margin-top: 1em;
   height: 25px;
 }
+
+.home img {
+  width: 70%;
+}
+
+.img-wrapper {
+  width: 90%;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.movie img {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin: 20px auto;
+}
