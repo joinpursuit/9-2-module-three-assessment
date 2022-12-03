@@ -1,6 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background: #517e94;
   padding: 1em;
   margin-bottom: 2em;
@@ -10,7 +16,8 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 2em;
-  color: white;
+  /* color: white; */
+  color: #6ad5ff;
 }
 
 nav img {
