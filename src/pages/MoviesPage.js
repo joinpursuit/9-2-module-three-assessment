@@ -25,7 +25,7 @@ export default function MoviesPage() {
   }, []);
 
   return (
-    <div className="movies">
+    <section className="movies">
       <h2>Select a Movie</h2>
       <select
         name="movies"
@@ -44,6 +44,6 @@ export default function MoviesPage() {
       {selectedMovieId ? (
         <MovieCard movieId={selectedMovieId} movies={movies} />
       ) : null}
-    </div>
+    </section>
   );
 }
