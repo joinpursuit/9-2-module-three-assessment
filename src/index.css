@@ -70,6 +70,7 @@ li {
 .locations ul > li > ul li span {
   text-align: center;
   display: inline-block;
+  font-weight: bold;
   width: 100%;
 }
 .details li {
