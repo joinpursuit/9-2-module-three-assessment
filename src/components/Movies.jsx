@@ -4,11 +4,11 @@ export default function Movies({allMovies, selectedMovie, setSelectedMovie}) {
         setSelectedMovie(e.target.value)
     }
 
-    console.log(selectedMovie)
+    // console.log(selectedMovie)
 
     function filteredMovie() {
         const chosenMovie = allMovies.filter((movie) => movie.title === selectedMovie)
-        console.log(chosenMovie)
+        // console.log(chosenMovie)
 
         if (allMovies) {
             return (

@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Movies from "./components/Movies";
 import People from "./components/People";
+import Locations from "./components/Locations";
 import { useEffect, useState } from "react";
 
 const films_json = "/films.json";
@@ -34,6 +35,7 @@ function App() {
             }
           />
           <Route path="/people" element={<People />} />
+          <Route path="/location" element={<Locations />} />
         </Routes>
       </div>
     </Router>

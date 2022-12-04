@@ -28,7 +28,7 @@ export default function People() {
   }
 
   // console.log(searchPerson)
-  console.log(foundPerson);
+//   console.log(foundPerson);
   return (
     <div>
       <h1>Search for a Person</h1>
