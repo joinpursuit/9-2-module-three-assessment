@@ -1,0 +1,44 @@
+header {
+    align-items: center;
+    background: #517e94;
+    display: flex;
+    padding: 5px 15% 5px;
+}
+
+header article,
+header nav {
+    width: 50%;
+    height: 50%;
+}
+
+img {
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
+}
+
+header ul {
+    
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    font-family: var(--primary-font);
+    font-size: 18px;
+    padding: 0 25px;
+}
+
+header ul li a {
+    color: white;
+    border-bottom: 2px solid var(--light);
+    font-weight: 500;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: white;
+    border-bottom: 2px solid var(--white);
+}
