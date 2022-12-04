@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-
 import "./people.json";
 // import PeopleDetailsSpecific from "./PeopleDetailsSpecific";
 
 function People() {
   // const [details, setDetails] = useState("SelectGhibliTitle");
+//   const [error, setError] = useState(true);
 
   const [data, setData] = useState([]);
   const [people, setPeople] = useState("");
@@ -18,6 +18,10 @@ function People() {
 
 //   const [found, setFound] = useState(true);
 
+
+let divStyle={
+    "display":" block"
+}
 
 
   const dataGhibli = require("./people.json");
@@ -74,6 +78,9 @@ else{}
         {/* <PeopleDetailsSpecific data={data} people={people} /> */}
         { data.map((renderDetails) => {
           if ((people.toLowerCase()).includes(((renderDetails.name).toLowerCase()))) {
+            divStyle={
+                "display":"none"
+            }
             return (
               <div key={renderDetails.id}>
                 <h1>{renderDetails.name}</h1>
@@ -90,6 +97,7 @@ else{}
    
       </div>
 
+<div className="notfounddiv" style={divStyle}>Not Found</div>
 
 </div>
   );

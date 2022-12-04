@@ -149,6 +149,15 @@ background-color: rgba(127, 255, 212, 0.285);
     
     }
 
+    .notfounddiv{
+        margin-top: 30px;
+        font-size: xx-large;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding:30px;
+        color: #93151d;
+        border: solid;
+    }
+
 @media (min-width: 300px) and (max-width: 768px) {
    
 
@@ -252,6 +261,16 @@ button:hover{
         font-size: small;
 
         }
+
+
+    .notfounddiv{
+        margin-top: 30px;
+        font-size: medium;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding:10px;
+        color: #93151d;
+        border: solid;
+    }
 
 
   }
