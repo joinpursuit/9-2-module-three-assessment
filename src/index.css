@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -46,17 +55,19 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 0;
+  list-style-type: none;
 }
 
 .locations ul > li {
   background: lemonchiffon;
-  width: 26%;
+  min-width: 26%;
   padding: 2em;
+  margin-bottom: 1rem;
 }
 
 .locations ul > li > ul {
   margin-left: 0;
-  list-style: none;
+  /* list-style: none; */
 }
 
 .locations ul > li > ul li {
@@ -65,12 +76,14 @@ li {
   flex-wrap: no-wrap;
   width: 90%;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .locations ul > li > ul li span {
   text-align: center;
   display: inline-block;
   width: 100%;
+  white-space: no-wrap;
 }
 .details li {
   list-style: none;
@@ -121,4 +134,47 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.movies label,
+.people label {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.movies select,
+.people input,
+.people button {
+  font: inherit;
+  padding: 0.3rem 0.5rem;
+}
+
+.movies > section,
+.people > section {
+  margin-top: 1rem;
+} 
+
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btns button {
+  font: inherit;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+.btns button.active, 
+.btns button:hover {
+  background: #bbb; 
 }
