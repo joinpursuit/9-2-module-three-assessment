@@ -1,7 +1,7 @@
 export default function Home(){
     return (
         <div>
-            <h1>Welcome to Ghibli App</h1>
+            <h1>Welcome to GhibliApp</h1>
         </div>
     );
 }

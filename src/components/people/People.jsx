@@ -8,6 +8,7 @@ export default function People() {
   const [allPeople, setAllPeople] = useState([]);
   const [searchPeople, setSearchPeople] = useState("");
   const [searchError, SetSearchError] = useState(false);
+  const [search, setSearch] = useState(false);
 
   useEffect(() => {
     getAllPeople()
@@ -38,12 +39,14 @@ export default function People() {
   function handleSubmit(event){
     event.preventDefault();
 
+    setSearch(true);
+    
     let result = filterPeople(searchPeople, allPeople);
-    if(result.length){
+    if(result.length > 0){
       setPeople(result);
       SetSearchError(false);
     }
-    else{ 
+    else  { 
       SetSearchError(true);
     }
     setSearchPeople("")
@@ -70,12 +73,16 @@ export default function People() {
           </form>
         </label>
         <section className="shows-index">
-          {
+          {/* {
             searchError ? "Not Found" : 
             people.map((person) => {
               return <Person person={person} key={person.id} />;
             })
-          }
+          } */}
+            {
+            searchError ? "Not Found" : 
+            <Person people={people} search={search} />
+            }
         </section>
       </section>
     )}
