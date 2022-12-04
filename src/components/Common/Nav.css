@@ -1,0 +1,20 @@
+.nav nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav h6 {
+  padding-top: 0%;
+  margin-top: 0%;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+#logo {
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+.hover:hover {
+  color: greenyellow;
+}
