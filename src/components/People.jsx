@@ -15,7 +15,7 @@ export default function People() {
 
   function filterSearch() {
     const filterSearch = allPeople.find((person) =>
-      person.name.toLowerCase().includes(searchPerson)
+      person.name.toLowerCase() === searchPerson.trim()
     );
     filterSearch ? setFoundPerson(filterSearch) : setFoundPerson("");
   }
@@ -53,7 +53,7 @@ export default function People() {
           <span>Hair Color:</span> {foundPerson.hair_color}
         </aside>
       )}
-      {foundPerson === "" && <p>Not Found</p>}
+      {foundPerson === "" && <p className="not-found">Not Found</p>}
     </div>
   );
 }

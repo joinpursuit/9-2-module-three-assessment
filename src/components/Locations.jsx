@@ -54,6 +54,8 @@ export default function Locations() {
         <button onClick={() => setToggle(!toggle)}>
           {!toggle ? "Show Locations" : "Hide Locations"}
         </button>
+        {toggle && (
+          <>
         <button id="sort-name" onClick={handleSorting}>
           Sort by Name
         </button>
@@ -63,6 +65,8 @@ export default function Locations() {
         <button id="sort-terrain" onClick={handleSorting}>
           Sort by Terrain
         </button>
+</>
+        )}
       </section>
       {toggle && (
         <ul className="details">
