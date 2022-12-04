@@ -8,7 +8,7 @@ function People() {
 //   const [error, setError] = useState(true);
 
   const [data, setData] = useState([]);
-  const [people, setPeople] = useState("");
+  const [people, setPeople] = useState();
   //For Search Bar
   const [input, setInput] = useState("Search for a Person");
   //   useEffect(()=>{
@@ -76,7 +76,7 @@ else{}
 
       <div>
         {/* <PeopleDetailsSpecific data={data} people={people} /> */}
-        { data.map((renderDetails) => {
+        { people && data.map((renderDetails) => {
           if ((people.toLowerCase()).includes(((renderDetails.name).toLowerCase()))) {
             divStyle={
                 "display":"none"
@@ -97,7 +97,7 @@ else{}
    
       </div>
 
-<div className="notfounddiv" style={divStyle}>Not Found</div>
+<div className="notfounddiv" style={divStyle}>{people ? "Not Found" : "Please Make a Search"}</div>
 
 </div>
   );
