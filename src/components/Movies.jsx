@@ -6,11 +6,12 @@ export default function Movies({ films }) {
 
   function handleChange(e) {
     e.preventDefault();
-    setUserSelection(e.target.value);
+   setUserSelection(e.target.value);
   }
 
-  let filterByTitle = films.filter((film) => film.title === userSelection);
+  let filterByTitle = films.filter((film) => film.title === userSelection)
 
+ 
   return (
     <div className="movies">
       <h1>Select a Movie</h1>
@@ -27,18 +28,13 @@ export default function Movies({ films }) {
       {filterByTitle.map((film) => {
         return (
           <aside>
-            <h3>
-              <strong>Title:</strong> {film.title}
-            </h3>
-            <p>
-              <strong>Release Date:</strong> {film.release_date}
-            </p>
-            <p>
-              <strong>Description:</strong> {film.description}
-            </p>
+            <h3><strong>Title:</strong> {film.title}</h3>
+            <p><strong>Release Date:</strong> {film.release_date}</p>
+            <p><strong>Description:</strong> {film.description}</p>
           </aside>
-        );
-      })}
+        )
+      })
+    }
     </div>
   );
 }
