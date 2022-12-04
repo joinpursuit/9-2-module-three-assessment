@@ -63,7 +63,7 @@ li {
   background: ghostwhite;
   display: flex;
   flex-wrap: no-wrap;
-  width: 90%;
+  width: 70%;
   justify-content: center;
 }
 
@@ -93,6 +93,9 @@ li {
   width: 80%;
   min-height: 50%;
   margin: auto;
+  text-align: center;
+  line-height: 2;
+  word-spacing: 0.5rem;
 }
 
 .people aside h3 {
@@ -115,6 +118,9 @@ li {
   width: 90%;
   margin: auto;
   padding: 1em;
+  text-align: center;
+  line-height: 1.9;
+  word-spacing: 0.1rem;
 }
 
 ul li::marker {

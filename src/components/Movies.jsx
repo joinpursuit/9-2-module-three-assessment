@@ -1,59 +1,62 @@
-export default function Movies({allMovies, selectedMovie, setSelectedMovie}) {
+import { useEffect, useState } from "react";
 
-    function handleChange(e) {
-        setSelectedMovie(e.target.value)
-    }
+const films_json = "/films.json";
 
-    // console.log(selectedMovie)
+export default function Movies() {
+  const [allMovies, setAllMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState("");
 
-    function filteredMovie() {
-        const chosenMovie = allMovies.filter((movie) => movie.title === selectedMovie)
-        // console.log(chosenMovie)
+  useEffect(() => {
+    fetch(films_json)
+      .then((res) => res.json())
+      .then(setAllMovies);
+  }, []);
 
-        if (allMovies) {
+  function handleChange(e) {
+    setSelectedMovie(e.target.value);
+  }
+
+  function filteredMovie() {
+    const chosenMovie = allMovies.filter(
+      (movie) => movie.title === selectedMovie
+    );
+
+    if (allMovies) {
+      return (
+        <aside>
+          {chosenMovie.map((movie) => {
             return (
-                <div>
-                    {chosenMovie.map(movie => {
-                        return (
-                            <div key={movie.id}>
-                            <h2>
-                         Title: {movie.title}
-                    </h2>
-                    <p>Released Date: {movie.release_date }</p>
-                    <p>
-                       Description: {movie.description}
-                                </p>
-                            </div>
-                        )
-                    })}
-                    
-                   
-                </div>
-            )
-            
-        } else {
-            return null;
-        }
+              <div key={movie.id}>
+                <h3>Title: {movie.title}</h3>
+                <span>Released Date:</span> {movie.release_date}
+                <br />
+                <span>Description:</span> {movie.description}
+              </div>
+            );
+          })}
+        </aside>
+      );
+    } else {
+      return null;
     }
+  }
 
-    return (
-        <div className="movies">
-            <h1>Select a Movie</h1>
-            <select onChange={handleChange}>
-                <option value=""></option>
-                {allMovies.map((movie) => {
-                    return (
-                        <option key={movie.id} value={movie.title}>{movie.title}</option>
-                    )
-                })}
-            </select>
-            <div>
-                <h2>
-                   { filteredMovie()}
-                </h2>
-                
-            
-            </div>
-       </div>
-   ) 
+  return (
+    <div className="movies">
+      <section>
+        <h1>Select a Movie</h1>
+        <select onChange={handleChange}>
+          <option value=""></option>
+          {allMovies.map((movie) => {
+            return (
+              <option key={movie.id} value={movie.title}>
+                {movie.title}
+              </option>
+            );
+          })}
+        </select>
+      </section>
+      {filteredMovie()}
+    </div>
+  );
 }

@@ -5,7 +5,7 @@ const people_json = "/people.json";
 export default function People() {
   const [allPeople, setAllPeople] = useState([]);
   const [searchPerson, setSearchPerson] = useState("");
-  const [foundPerson, setFoundPerson] = useState();
+  const [foundPerson, setFoundPerson] = useState(null);
 
   useEffect(() => {
     fetch(people_json)
@@ -17,7 +17,7 @@ export default function People() {
     const filterSearch = allPeople.find((person) =>
       person.name.toLowerCase().includes(searchPerson)
     );
-    setFoundPerson(filterSearch);
+    filterSearch ? setFoundPerson(filterSearch) : setFoundPerson("");
   }
 
   function handleSearch(e) {
@@ -27,31 +27,33 @@ export default function People() {
     setSearchPerson("");
   }
 
-  // console.log(searchPerson)
-//   console.log(foundPerson);
   return (
-    <div>
-      <h1>Search for a Person</h1>
-      <form onSubmit={handleSearch}>
-        <input
-          value={searchPerson}
-          onChange={(e) => setSearchPerson(e.target.value)}
-        />
-        <button>Search</button>
-      </form>
-      <div>
-        {foundPerson ? (
-          <>
-            <h2>Name: {foundPerson.name}</h2>
-            <p>Age: {foundPerson.age}</p>
-            <p>Gender: {foundPerson.gender}</p>
-            <p>Eye Color: {foundPerson.eye_color}</p>
-            <p>Hair Color: {foundPerson.hair_color}</p>
-          </>
-        ) : (
-          <p>Not Found</p>
-        )}
-      </div>
+    <div className="people">
+      <section>
+        <h2>Search for a Person</h2>
+        <form onSubmit={handleSearch}>
+          <input
+            value={searchPerson}
+            onChange={(e) => setSearchPerson(e.target.value)}
+            required
+          />
+          <button>Search</button>
+        </form>
+      </section>
+
+      {foundPerson && (
+        <aside>
+          <h3>Name: {foundPerson.name}</h3>
+          <span>Age:</span> {foundPerson.age}
+          <br />
+          <span>Gender:</span> {foundPerson.gender}
+          <br />
+          <span>Eye Color:</span> {foundPerson.eye_color}
+          <br />
+          <span>Hair Color:</span> {foundPerson.hair_color}
+        </aside>
+      )}
+      {foundPerson === "" && <p>Not Found</p>}
     </div>
   );
 }
