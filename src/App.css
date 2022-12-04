@@ -158,6 +158,21 @@ background-color: rgba(127, 255, 212, 0.285);
         border: solid;
     }
 
+    .wildCard{
+text-align: center;
+font-size: 30px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding:30px;
+
+    }
+
+   #catimage{
+
+    width: 300px;
+    height:auto;
+    padding: 50px;
+   }
+
 @media (min-width: 300px) and (max-width: 768px) {
    
 

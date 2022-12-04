@@ -5,7 +5,7 @@ import Home from "./Components/Home";
 import Movies from "./Components/Movies";
 import People from "./Components/People";
 import Locations from "./Components/Locations";
-
+import WildCard from "./Components/WildCard";
 
 import "./App.css"
 function App() {
@@ -21,7 +21,7 @@ function App() {
 <Route path="/movies" element={<Movies />} />
 <Route path="/people" element={<People />} />
 <Route path="/locations" element={<Locations />} />
-
+<Route path="*" element={<WildCard/>} />
 
 
 </Routes>
