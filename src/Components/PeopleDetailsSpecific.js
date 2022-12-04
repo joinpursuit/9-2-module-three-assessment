@@ -8,7 +8,7 @@ function PeopleDetailsSpecific({ data, people }) {
         { data.map((renderDetails,index) => {
           if ((people.toLowerCase()).includes(((renderDetails.name).toLowerCase()))) {
             return (
-              <div key={index}>
+              <div  key={index}>
                 <h1>{renderDetails.name}</h1>
   
                 <h4>GENDER: {renderDetails.gender}</h4>

@@ -72,7 +72,7 @@ else{}
 
       <div>
         {/* <PeopleDetailsSpecific data={data} people={people} /> */}
-       <div></div> { data.map((renderDetails) => {
+        { data.map((renderDetails) => {
           if ((people.toLowerCase()).includes(((renderDetails.name).toLowerCase()))) {
             return (
               <div key={renderDetails.id}>

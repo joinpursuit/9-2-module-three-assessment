@@ -4,7 +4,7 @@ function LocationsName({local}){
        
         
         return(
-            <div>
+            <div className="localation-css">
             <div><strong>Name:</strong> {local.name}</div>
             <div><strong>Climate:</strong> {local.climate}</div>
             <div><strong>Terrain:</strong> {local.terrain}</div>
