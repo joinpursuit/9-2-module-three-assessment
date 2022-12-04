@@ -112,13 +112,37 @@ li {
 
 .movies aside {
   background: aliceblue;
-  width: 90%;
+  width: 80%;
   margin: auto;
-  padding: 1em;
+  padding: 2em;
+  text-align: center;
+  line-height: 1.25;
+  word-spacing: 0.1rem;
 }
+
 
 ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  padding: 1em;
+  padding-top: 5%;
+  padding-bottom: -5%;
+  margin-top: 5em;
+  margin-bottom:0em;
+  font-family: sans-serif;
+  text-align: center;
+  border: 10px solid 517e94;
+  border-radius: 5px;
+  justify-content: space-around;
+  font-size: x-large;
+  font-weight: 900;
+  margin-right: 5%;
+  margin-left: 5%;
 }
