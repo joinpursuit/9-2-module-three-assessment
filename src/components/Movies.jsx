@@ -23,7 +23,7 @@ export default function Movies({ films }) {
         ))}
       </select>
       {filterByTitle.map((film) => (
-        <aside>
+        <aside key={film.id}>
           <h3>
             <strong>Title:</strong> {film.title}
           </h3>
