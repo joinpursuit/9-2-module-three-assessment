@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+* {
+  font-family: "Nerko One", cursive;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Nerko One", cursive;
 }
 
 nav {
@@ -11,13 +17,11 @@ nav {
   background: #517e94;
   padding: 1em;
   margin-bottom: 2em;
-  font-family: sans-serif;
 }
 
 nav a {
   text-decoration: none;
   font-size: 2em;
-  /* color: white; */
   color: #6ad5ff;
 }
 
@@ -37,7 +41,6 @@ h2 {
   width: 90%;
   margin: auto;
   text-align: center;
-  font-family: sans-serif;
 }
 
 li {
@@ -177,7 +180,7 @@ main {
 }
 .movie-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
