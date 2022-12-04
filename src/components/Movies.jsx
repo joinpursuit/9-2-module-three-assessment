@@ -8,23 +8,20 @@ export default function Movies() {
     fetch("./films.json")
       .then((response) => response.json())
       .then((data) => setMoviesArr(data))
-      .then(console.log(moviesArr))
-      .catch((error) => console.log(error));
+      .catch((error) => console.error(error));
   }, [moviesArr.length]);
 
   function movieSelect(event) {
     if (event.target.value !== "-1") {
       setDropdownOption(moviesArr[event.target.value]);
-      console.log(moviesArr);
-      console.log(event.target.value);
     } else {
       setDropdownOption({});
     }
   }
 
   return (
-    <div className="movies">
-      <p className="page-title">Select a Movie</p>
+    <div className="movies route">
+      <h1 className="page-title">Select a Movie</h1>
       <select
         name="movies-dropdown"
         id="movies-dropdown"
@@ -34,7 +31,6 @@ export default function Movies() {
           ---Please select a movie---
         </option>
         {moviesArr.map((movie) => {
-          //   console.log(moviesArr.indexOf(movie));
           return (
             <option value={moviesArr.indexOf(movie)} key={movie.id}>
               {movie.title}

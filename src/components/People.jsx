@@ -9,14 +9,11 @@ export default function People() {
     fetch("./people.json")
       .then((response) => response.json())
       .then((data) => setPeopleArr(data))
-      .then(console.log(peopleArr))
-      //   .then(peopleArr.map(console.log))
-      .catch((error) => console.log(error));
+      .catch((error) => console.error(error));
   }, [peopleArr.length]);
 
   function handleTextChange(event) {
     setTextInput(event.target.value);
-    // console.log(textInput);
   }
 
   function handleSubmit(event) {
@@ -24,7 +21,6 @@ export default function People() {
     event.preventDefault();
 
     peopleArr.map((person) => {
-      //   console.log(person);
       if (person.name.toLowerCase().includes(textInput.toLowerCase())) {
         tempArr.push(person);
       } else {
@@ -33,14 +29,20 @@ export default function People() {
     });
 
     setSearchResult([...tempArr]);
+    setTextInput("");
   }
 
   return (
-    <aside className="people">
+    <aside className="people route">
       <p className="page-title">Search for a Person</p>
 
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Search" onChange={handleTextChange} />
+        <input
+          type="text"
+          placeholder="Search"
+          onChange={handleTextChange}
+          value={textInput}
+        />
         <button>Submit</button>
       </form>
 

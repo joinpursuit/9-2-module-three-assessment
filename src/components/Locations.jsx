@@ -9,9 +9,7 @@ export default function Locations() {
     fetch("./locations.json")
       .then((response) => response.json())
       .then((data) => setLocationsArr(data))
-      .then(console.log(locationsArr))
-      //   .then(peopleArr.map(console.log))
-      .catch((error) => console.log(error));
+      .catch((error) => console.error(error));
   }, [locationsArr.length]);
 
   function sortBy(e) {
@@ -30,7 +28,7 @@ export default function Locations() {
   }
 
   return (
-    <aside className="locations">
+    <aside className="locations route">
       <p className="page-title">List of Locations</p>
       <div className="buttons">
         <button

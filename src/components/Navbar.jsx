@@ -8,13 +8,13 @@ export default function Navbar() {
       </Link>
       <ul>
         <li>
-          <Link to="/movies">Movies</Link>
+          <Link to="/locations">Locations</Link>
         </li>
         <li>
           <Link to="/people">People</Link>
         </li>
         <li>
-          <Link to="/locations">Locations</Link>
+          <Link to="/movies">Movies</Link>
         </li>
       </ul>
     </nav>
