@@ -31,6 +31,8 @@ padding:10px;
 
 .people{
     text-align: center;
+    font-family:Arial, Helvetica, sans-serif
+
 }
 
 .movies{
@@ -40,6 +42,8 @@ padding:10px;
 
 .locations{
     text-align: center;
+    font-family:Arial, Helvetica, sans-serif
+
 }
 
 button{
@@ -101,6 +105,28 @@ button:hover{
 
 }
 
+.homePAge{
+    
+    margin: auto;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 20px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif
+
+
+}
+
+.cardContact{
+    text-align: center;
+    font-size: medium;
+    border: solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 @media (min-width: 300px) and (max-width: 768px) {
    
 
@@ -157,6 +183,28 @@ button:hover{
     display: inline-block;
     font-size: 17px;
 }
+
+
+.homePAge{
+    
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.cardContact{
+    text-align: center;
+    font-size: small;
+    border: solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
 
   }
