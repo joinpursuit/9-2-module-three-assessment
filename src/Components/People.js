@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import "./maleimage.png"
+import "./femaleimage.png"
 
 import "./people.json";
 // import PeopleDetailsSpecific from "./PeopleDetailsSpecific";
@@ -88,6 +90,10 @@ else{}
                 <h4>Gender: {renderDetails.gender}</h4>
   
                 <h4><strong>Age: </strong> {renderDetails.age}</h4>
+                {(renderDetails.gender==="Male") && <img id="catimage" src={(require("./maleimage.png"))} className="gendercard" alt="male-pic"/>}
+                {(renderDetails.gender==="Female") && <img id="catimage" src={(require("./femaleimage.png"))} className="gendercard" alt="female-pic"/>}
+                {(renderDetails.gender==="NA") && <img id="catimage" src={(require("./animalimage.png"))} className="gendercard" alt="totoro-animal-pic"/>}
+
               </div>
             );
           } else {

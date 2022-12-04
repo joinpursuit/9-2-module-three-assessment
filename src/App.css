@@ -177,12 +177,16 @@ padding:30px;
   #person-card{
     border: solid;
     border-color: #656565;
-    color: aliceblue;
-    background-color:rgba(0, 0, 0, 0.29);
+    color: rgb(0, 0, 0);
+    background-color:rgba(0, 0, 0, 0.065);
     margin-top: 20px;
   }
 
+  .gendercard{
 
+    width:300px;
+    height:auto;
+  }
 @media (min-width: 300px) and (max-width: 768px) {
    
 
