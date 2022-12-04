@@ -12,6 +12,8 @@ function MovieDetailsSpecific({ data, selectedTitle }) {
               <h4>Release Date: {renderDetails.release_date}</h4>
 
               <p><strong>Description:</strong> {renderDetails.description}</p>
+<img className="imagePoster" src={renderDetails.movie_banner} alt={renderDetails.title}></img>
+
             </div>
           );
         } else {
