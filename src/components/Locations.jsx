@@ -23,7 +23,7 @@ export default function Locations() {
   console.log(sortedNames);
   return (
     <div className="locations">
-      <h1>Lis of Locations</h1>
+      <h1>List of Locations</h1>
       <button onClick={(e) => setShowMore(!showMore)}>
         {!showMore ? "Show Locations " : "Hide Locations"}
       </button>{" "}

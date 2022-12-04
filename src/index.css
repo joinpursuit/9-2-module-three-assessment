@@ -36,6 +36,9 @@ li {
 }
 
 .locations {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align: center;
+font-weight: 400;
   background: ghostwhite;
   padding: 1em;
   min-height: 80vh;
@@ -49,7 +52,7 @@ li {
 }
 
 .locations ul > li {
-  background: lemonchiffon;
+  background: rgb(228, 255, 205);
   width: 26%;
   padding: 2em;
 }
@@ -83,7 +86,10 @@ li {
 }
 
 .people {
-  background: lemonchiffon;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+text-align: center;
+background: #e9d7f2;
   height: 80vh;
   padding-top: 1em;
 }
@@ -105,6 +111,8 @@ li {
 }
 
 .movies {
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ text-align: center;
   padding-top: 1em;
   height: 80vh;
   background: #d7f0f2;
@@ -121,4 +129,22 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #517e94;
+}
+
+button {
+  border: none;
+  border-radius: 10%;
+}
+
+input {
+  border: none;
+}
+
+select {
+  border: none;
 }
