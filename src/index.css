@@ -7,6 +7,15 @@ nav {
   font-family: sans-serif;
 }
 
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  padding-right: 50px;
+} 
+
 nav a {
   text-decoration: none;
   font-size: 2em;
@@ -14,7 +23,13 @@ nav a {
 }
 
 nav img {
+  position: fixed;
+  left: 60px;
   height: 50px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 main {
@@ -35,10 +50,29 @@ li {
   font-size: 1em;
 }
 
+.splash-page {
+  margin: auto;
+  text-align: center;
+}
+
 .locations {
   background: ghostwhite;
   padding: 1em;
   min-height: 80vh;
+}
+
+.buttons {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.locations-button {
+  display:inline-block;
+  border: solid 1px black;
+  margin: auto;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .locations > ul {
@@ -46,12 +80,16 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 0;
+  list-style: none;
 }
 
 .locations ul > li {
-  background: lemonchiffon;
+  background: rgb(254, 180, 127);
+  border-radius: 12px;
   width: 26%;
   padding: 2em;
+  margin-bottom: 10px;
+  /* text-align: center; */
 }
 
 .locations ul > li > ul {
@@ -72,6 +110,7 @@ li {
   display: inline-block;
   width: 100%;
 }
+
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -86,10 +125,33 @@ li {
   background: lemonchiffon;
   height: 80vh;
   padding-top: 1em;
+  text-align: center;
+}
+
+.page-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px
+}
+
+.people form {
+  display: inline-block;
+}
+
+.people .array-result {
+  background: #38b7f6;
+  width: 70%;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .people aside {
-  background: ghostwhite;
+  /* background: ghostwhite; */
   width: 80%;
   min-height: 50%;
   margin: auto;
@@ -110,11 +172,19 @@ li {
   background: #d7f0f2;
 }
 
+.movies select {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
 .movies aside {
   background: aliceblue;
   width: 90%;
   margin: auto;
   padding: 1em;
+  text-align: center;
 }
 
 ul li::marker {
