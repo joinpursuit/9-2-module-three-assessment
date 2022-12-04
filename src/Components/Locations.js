@@ -112,7 +112,7 @@ const buttonInstructionsStyle= {
 }
 
 const buttonHIDE= {
-    borderRadius: "50%",
+    borderRadius: "10%",
     backgroundColor:"gray",
     marginBottom:"10px"
 
