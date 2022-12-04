@@ -173,6 +173,16 @@ padding:30px;
     padding: 50px;
    }
 
+
+  #person-card{
+    border: solid;
+    border-color: #656565;
+    color: aliceblue;
+    background-color:rgba(0, 0, 0, 0.29);
+    margin-top: 20px;
+  }
+
+
 @media (min-width: 300px) and (max-width: 768px) {
    
 
@@ -286,6 +296,22 @@ button:hover{
         color: #93151d;
         border: solid;
     }
+
+    .wildCard{
+        text-align: center;
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding:30px;
+        
+            }
+        
+           #catimage{
+        
+            width: 150px;
+            height:auto;
+            padding: 50px;
+           }
+        
 
 
   }

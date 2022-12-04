@@ -82,12 +82,12 @@ else{}
                 "display":"none"
             }
             return (
-              <div key={renderDetails.id}>
+              <div id="person-card" key={renderDetails.id}>
                 <h1>{renderDetails.name}</h1>
   
-                <h4>GENDER: {renderDetails.gender}</h4>
+                <h4>Gender: {renderDetails.gender}</h4>
   
-                <p><strong>AGE:</strong> {renderDetails.age}</p>
+                <h4><strong>Age: </strong> {renderDetails.age}</h4>
               </div>
             );
           } else {
