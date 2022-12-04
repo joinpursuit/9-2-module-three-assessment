@@ -148,3 +148,7 @@ input {
 select {
   border: none;
 }
+
+.home {
+text-align: center;
+}
