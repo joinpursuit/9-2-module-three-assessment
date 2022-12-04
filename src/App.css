@@ -68,10 +68,37 @@ button{
     font-size: 17px;
 }
 
+#search:hover{
+    background-color: #974c92; 
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+}
+
 #movDETS{
     margin: auto;
     padding-left: 200px;
     padding-right: 200px;
+}
+
+
+button:hover{
+    background-color: #974c92; 
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 10px;
+
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -103,5 +130,33 @@ button{
     padding-left: 20px;
     padding-right: 20px;
 }
+
+button:hover{
+    background-color: #974c92; 
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 10px;
+
+}
+
+
+#search:hover{
+    background-color: #974c92; 
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+}
+
 
   }
