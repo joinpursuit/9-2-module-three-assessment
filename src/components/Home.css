@@ -1,0 +1,9 @@
+.home {
+  display: flexbox;
+  justify-content: flex-end;
+  padding-left: 25%;
+}
+
+.home h1 {
+  padding-left: 13%;
+}

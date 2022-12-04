@@ -1,0 +1,26 @@
+.movie-card h1,
+h4 {
+  font-family: fantasy;
+  font-size: larger;
+}
+
+#nul {
+  padding-left: 20px;
+}
+
+span {
+  font-family: fantasy;
+}
+
+.movie-card {
+  padding: 0px 10px 15px 15px;
+  background-color: rgb(16, 65, 26);
+  opacity: 85%;
+  width: 50%;
+}
+
+#text {
+  overflow: scroll;
+  font-size: larger;
+  width: 30%;
+}

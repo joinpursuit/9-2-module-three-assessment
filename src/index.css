@@ -1,7 +1,12 @@
+.home {
+  background-image: url("https://smallimg.pngkey.com/png/small/3-36968_rick-and-morty-portal-edible-printing-rick-and.png");
+  background-repeat: repeat;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
-  background: #517e94;
+  background: #2abf36;
   padding: 1em;
   margin-bottom: 2em;
   font-family: sans-serif;
@@ -10,7 +15,7 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 2em;
-  color: white;
+  color: rgb(18, 74, 4);
 }
 
 nav img {
@@ -36,7 +41,7 @@ li {
 }
 
 .locations {
-  background: ghostwhite;
+  background: #a3efca;
   padding: 1em;
   min-height: 80vh;
 }
@@ -49,7 +54,7 @@ li {
 }
 
 .locations ul > li {
-  background: lemonchiffon;
+  background: #a3efca;
   width: 26%;
   padding: 2em;
 }
@@ -60,7 +65,7 @@ li {
 }
 
 .locations ul > li > ul li {
-  background: ghostwhite;
+  background: #a3efca;
   display: flex;
   flex-wrap: no-wrap;
   width: 90%;
@@ -83,13 +88,13 @@ li {
 }
 
 .people {
-  background: lemonchiffon;
+  background: #a3efca;
   height: 80vh;
   padding-top: 1em;
 }
 
 .people aside {
-  background: ghostwhite;
+  background: #a3efca;
   width: 80%;
   min-height: 50%;
   margin: auto;
@@ -107,11 +112,11 @@ li {
 .movies {
   padding-top: 1em;
   height: 80vh;
-  background: #d7f0f2;
+  background: #a3efca;
 }
 
 .movies aside {
-  background: aliceblue;
+  background: rgb(2, 209, 33);
   width: 90%;
   margin: auto;
   padding: 1em;
