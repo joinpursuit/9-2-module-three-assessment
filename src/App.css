@@ -41,3 +41,67 @@ padding:10px;
 .locations{
     text-align: center;
 }
+
+button{
+    background-color: #4CAF50; 
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+#search{
+    background-color: #4CAF50; 
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+}
+
+#movDETS{
+    margin: auto;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+   
+
+h1{
+    font-size: large;
+}
+.links{
+    font-size: small;
+}
+
+button{
+    background-color: #4CAF50; 
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+
+#movDETS{
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+  }

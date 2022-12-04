@@ -43,7 +43,7 @@ function Movies() {
         })}
       </select>
 
-<div><MovieDetailsSpecific data={data} selectedTitle={title} /></div>
+<div id="movDETS"><MovieDetailsSpecific data={data} selectedTitle={title} /></div>
 
     </div>
   );

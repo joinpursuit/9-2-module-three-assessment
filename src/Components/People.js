@@ -66,13 +66,13 @@ else{}
           value={input}
           required
         />
-        <button>Search</button>
+        <button id="search">Search</button>
       </form>
 
 
       <div>
         {/* <PeopleDetailsSpecific data={data} people={people} /> */}
-        { data.map((renderDetails) => {
+       <div></div> { data.map((renderDetails) => {
           if ((people.toLowerCase()).includes(((renderDetails.name).toLowerCase()))) {
             return (
               <div key={renderDetails.id}>
@@ -86,7 +86,7 @@ else{}
           } else {
             return null;
           }
-        })}
+        }) } 
    
       </div>
 
