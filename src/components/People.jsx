@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function People() {
   const [people, setPeople] = useState([]);
   const [search, setSearch] = useState("");
-  const [filteredName, setFilteredName] = useState();
+  const [foundName, setFoundName] = useState();
 
   useEffect(() => {
     fetch("people.json")
@@ -12,19 +12,19 @@ export default function People() {
       .then(setPeople);
   }, []);
 
-  function filterBySearch() {
-    const filterName = people.find(
+  function findBySearch() {
+    const findName = people.find(
       (person) => person.name.toLowerCase() === search.toLowerCase()
     );
-    setFilteredName(filterName);
+    setFoundName(findName);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    filterBySearch();
+    findBySearch();
     setSearch("");
   }
-  //   console.log(filteredName);
+ 
 
   return (
     <div className="people">
@@ -38,12 +38,12 @@ export default function People() {
         ></input>
         <button>Submit</button>
       </form>
-      {filteredName ? (
+      {foundName ? (
         <aside>
-          <h3>Name: {filteredName.name} </h3>
-          <p>Age: {filteredName.age}</p>
-          <p>Eye Color: {filteredName.eye_color}</p>
-          <p>Hair Color: {filteredName.eye_color}</p>
+          <h3>Name: {foundName.name} </h3>
+          <p>Age: {foundName.age}</p>
+          <p>Eye Color: {foundName.eye_color}</p>
+          <p>Hair Color: {foundName.hair_color}</p>
         </aside>
       ) : (
         <p>Not Found</p>
