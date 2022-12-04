@@ -107,8 +107,15 @@ useEffect(()=>{
 
 
 
+const ButtonInstructionsStyle= {
+    fontSize:"12px"
+}
 
+const ButtonHIDE= {
+    borderRadius: "50%",
+    backgroundColor:"gray"
 
+}
 
 console.log(masterState)
 
@@ -118,8 +125,9 @@ console.log(masterState)
   return (
     <div className="locations">
                 <h1>List of Locations</h1>
+                <p style={ButtonInstructionsStyle}>Whenever a "sort" button is clicked, it should sort the data alphabetically even if the content is hidden.</p>
 
-      <button onClick={handleHide}>
+      <button style={ButtonHIDE} onClick={handleHide}>
         {" "}
         {hide ? "Hide Locations" : "Show Locations"}
       </button>
