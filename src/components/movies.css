@@ -1,0 +1,21 @@
+.movies {
+    padding-top: 1em;
+    height: 80vh;
+    background: rgb(242, 209, 23);
+  
+  }
+  
+.movies aside {
+    background: rgb(242, 209, 23);
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+  }
+  .movies span{
+    font-weight:200;
+  }
+
+  p{
+    color:white;
+    font-style: bold;
+}
