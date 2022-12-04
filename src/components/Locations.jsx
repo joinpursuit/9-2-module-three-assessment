@@ -3,8 +3,7 @@ import Card from 'react-bootstrap/Card';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Stack from 'react-bootstrap/Stack';
-import Container from 'react-bootstrap/Container';
+
 
 import { useState, useEffect } from "react";
 
@@ -23,7 +22,7 @@ function Locations() {
           .then((response) => response.json())
           .then((data) => {
             setLocations([...data]);
-            console.log(locations);
+
           })
           .catch((error) => {
             console.error("Error:", error);
