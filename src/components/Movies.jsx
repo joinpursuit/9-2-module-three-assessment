@@ -12,10 +12,6 @@ export default function Movies() {
       .then(setAllMovies);
   }, []);
 
-  function handleChange(e) {
-    setSelectedMovie(e.target.value);
-  }
-
   function filteredMovie() {
     const chosenMovie = allMovies.filter(
       (movie) => movie.title === selectedMovie
@@ -45,7 +41,7 @@ export default function Movies() {
     <div className="movies">
       <section>
         <h1>Select a Movie</h1>
-        <select onChange={handleChange}>
+        <select onChange={(e) => setSelectedMovie(e.target.value)}>
           <option value=""></option>
           {allMovies.map((movie) => {
             return (

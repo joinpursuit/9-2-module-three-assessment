@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import LocationCard from "./LocationsCard";
 
 const locations_json = "/locations.json";
 
@@ -56,42 +57,19 @@ export default function Locations() {
         </button>
         {toggle && (
           <>
-        <button id="sort-name" onClick={handleSorting}>
-          Sort by Name
-        </button>
-        <button id="sort-climate" onClick={handleSorting}>
-          Sort by Climate
-        </button>
-        <button id="sort-terrain" onClick={handleSorting}>
-          Sort by Terrain
-        </button>
-</>
+            <button id="sort-name" onClick={handleSorting}>
+              Sort by Name
+            </button>
+            <button id="sort-climate" onClick={handleSorting}>
+              Sort by Climate
+            </button>
+            <button id="sort-terrain" onClick={handleSorting}>
+              Sort by Terrain
+            </button>
+          </>
         )}
       </section>
-      {toggle && (
-        <ul className="details">
-          {allLocations.map(({ name, climate, terrain, id }) => {
-            return (
-              <li key={id}>
-                <ul>
-                  <li>
-                    <span>Name:</span>
-                    {name}
-                  </li>
-                  <li>
-                    <span>Climate:</span>
-                    {climate}
-                  </li>
-                  <li>
-                    <span>Terrain:</span>
-                    {terrain}
-                  </li>
-                </ul>
-              </li>
-            );
-          })}
-        </ul>
-      )}
+      {toggle && <LocationCard allLocations={allLocations} />}
     </div>
   );
 }

@@ -13,16 +13,12 @@ export default function People() {
       .then(setAllPeople);
   }, []);
 
-  function filterSearch() {
-    const filterSearch = allPeople.find((person) =>
-      person.name.toLowerCase() === searchPerson.trim()
-    );
-    filterSearch ? setFoundPerson(filterSearch) : setFoundPerson("");
-  }
-
   function handleSearch(e) {
     e.preventDefault();
-    filterSearch();
+    const filterSearch = allPeople.find(
+      (person) => person.name.toLowerCase() === searchPerson.trim()
+    );
+    filterSearch ? setFoundPerson(filterSearch) : setFoundPerson(0);
 
     setSearchPerson("");
   }
@@ -41,7 +37,9 @@ export default function People() {
         </form>
       </section>
 
-      {foundPerson && (
+      {foundPerson === 0 ? (
+        <p className="not-found">Not Found</p>
+      ) : foundPerson ? (
         <aside>
           <h3>Name: {foundPerson.name}</h3>
           <span>Age:</span> {foundPerson.age}
@@ -52,8 +50,7 @@ export default function People() {
           <br />
           <span>Hair Color:</span> {foundPerson.hair_color}
         </aside>
-      )}
-      {foundPerson === "" && <p className="not-found">Not Found</p>}
+      ) : null}
     </div>
   );
 }
