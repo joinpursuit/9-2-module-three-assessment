@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route style={{color:"red"}} path="/homes" element={<Home/>} />
           <Route style={{color:"red"}} path="/movies" element={<Movies/>} />
           <Route style={{color:"red"}}  path="/people" element={<People/>} />
           <Route style={{color:"red"}}  path="/Locations" element={<Locations/>} />
