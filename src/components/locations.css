@@ -1,0 +1,55 @@
+.locationsList div{
+    padding-top: 10px;
+    justify-content:space-evenly; 
+    columns: 5;
+    column-gap: 2.5em;
+    grid-row: 5;
+    display:flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    font-family: fantasy;
+    font-size: medium;
+}
+
+
+.locationsList{
+ 
+   margin:auto;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px gray solid;
+    font-size: medium;
+    font-family: fantasy;
+}
+
+
+.buttonContainer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: darkviolet;
+}
+
+.locations {
+    background: rgb(242, 209, 23);
+    height:auto;
+    padding-top: 1em;
+  }
+  
+  .locations > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+  
+  .locations ul > li {
+    background: rgb(242, 209, 23);
+    width: 26%;
+    padding: 2em;
+  }
+
+  
+

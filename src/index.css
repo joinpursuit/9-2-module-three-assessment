@@ -1,77 +1,47 @@
 nav {
-  display: flex;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+  display: grid;
   justify-content: space-around;
-  background: #517e94;
-  padding: 1em;
+  background: #d9ae10;
+  padding: .5em;
   margin-bottom: 2em;
-  font-family: sans-serif;
+  font-family:fantasy;
+  overflow: hidden;  
+  box-sizing: content-box;
+  /* l */
 }
 
 nav a {
   text-decoration: none;
   font-size: 2em;
-  color: white;
+  color: rgb(226, 128, 128);
 }
 
 nav img {
   height: 50px;
+  width: 50px;
 }
 
 main {
-  margin-top: 1em;
+  margin-top: 15em;
   text-align: center;
 }
 
 section,
 h2 {
-  margin-top: 1em;
-  width: 90%;
+  font-family:fantasy;
+  margin-top: 5em;
+  width: 45%;
   margin: auto;
   text-align: center;
-  font-family: sans-serif;
+  
 }
 
 li {
   font-size: 1em;
+  font-family: fantasy;
 }
 
-.locations {
-  background: ghostwhite;
-  padding: 1em;
-  min-height: 80vh;
-}
-
-.locations > ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 0;
-}
-
-.locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
-  padding: 2em;
-}
-
-.locations ul > li > ul {
-  margin-left: 0;
-  list-style: none;
-}
-
-.locations ul > li > ul li {
-  background: ghostwhite;
-  display: flex;
-  flex-wrap: no-wrap;
-  width: 90%;
-  justify-content: center;
-}
-
-.locations ul > li > ul li span {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-}
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -82,43 +52,20 @@ li {
   font-weight: bold;
 }
 
-.people {
-  background: lemonchiffon;
-  height: 80vh;
-  padding-top: 1em;
-}
-
-.people aside {
-  background: ghostwhite;
-  width: 80%;
-  min-height: 50%;
-  margin: auto;
-}
-
-.people aside h3 {
-  padding-top: 1em;
-}
-
-.people span,
-.movies span {
-  font-weight: bold;
-}
-
-.movies {
-  padding-top: 1em;
-  height: 80vh;
-  background: #d7f0f2;
-}
-
-.movies aside {
-  background: aliceblue;
-  width: 90%;
-  margin: auto;
-  padding: 1em;
-}
-
 ul li::marker {
   font-size: 150%;
-  color: #517e94;
+  color: #ecedee;
   opacity: 0;
+}
+
+p{
+  color: red;
+  font-style: oblique;
+  font-style: bold;
+}
+
+ 
+ 
+ :root{
+ --skeleton-animation: url("data:image/svg+xml;charset=utf-8,%3Csvg width='600' height='900' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='shimmer'%3E%3Cstop offset='0%25' stop-color='%23fff' stop-opacity='0'/%3E%3Cstop offset='50%25' stop-color='%23fff' stop-opacity='.75'/%3E%3Cstop offset='100%25' stop-color='%23fff' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cstyle%3E@keyframes skeleton-loading{to{transform:translateX(100%25)}}%3C/style%3E%3C/defs%3E%3Cpath style='fill:url(%23shimmer);transform:translateX(-100%25);animation:skeleton-loading 1.5s infinite' d='M0 0h600v900H0z'/%3E%3C/svg%3E")
 }

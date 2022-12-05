@@ -1,0 +1,51 @@
+p{
+    color: red;
+    font-style: oblique;
+    font-style: bold;
+}
+
+.peopleList{
+    padding-top: 10px;
+    justify-content:space-evenly; 
+    columns: 5;
+    column-gap: 2.5em;
+    grid-row: 5;
+    display:flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    font-family: fantasy;
+    font-size: medium;
+    border-color: red;
+}
+.peopleList div{
+    margin:auto;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px rgb(220, 18, 18) solid;
+    font-size: medium;
+    font-family: fantasy;
+}
+
+.people {
+    background: rgb(242, 209, 23);
+    height:auto;
+    padding-top: 1em;
+  }
+  
+.people aside {
+    background:blue;
+    width: 80%;
+    min-height: 50%;
+    margin: auto;
+  }
+  
+.people aside h3 {
+    padding-top:10em;
+  }
+  
+.people span {
+    font-weight:100;
+  }
+
