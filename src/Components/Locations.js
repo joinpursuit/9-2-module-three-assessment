@@ -133,9 +133,18 @@ console.log(masterState)
         {hide ? "Hide Locations" : "Show Locations"}
       </button>
       <br/><div></div>
-      <button onClick={() => setNameSort(true)}> Sort By Name </button>
-      <button onClick={() => setClimateSort(true)}> Sort By Climate </button>
-      <button onClick={() => setTerrainSort(true)}> Sort By Terrain </button>
+
+
+      {hide
+          ?  (<div><button onClick={() => setNameSort(true)}> Sort By Name </button>
+          <button onClick={() => setClimateSort(true)}> Sort By Climate </button>
+          <button onClick={() => setTerrainSort(true)}> Sort By Terrain </button></div>)
+          : null}
+
+      
+
+
+
 
       <ul className="no-bullets">
         {hide
