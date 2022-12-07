@@ -36,7 +36,7 @@ li {
 }
 
 .locations {
-  background: ghostwhite;
+  background: rgb(163, 245, 146);
   padding: 1em;
   min-height: 80vh;
 }
@@ -105,6 +105,8 @@ li {
 }
 
 .movies {
+  justify-content: center;
+  align-items: center;
   padding-top: 1em;
   height: 80vh;
   background: #d7f0f2;
@@ -121,4 +123,83 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav img {
+  height: 50px;
+  width: 50px;
+}
+
+nav div {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav div a {
+  margin-right: 20px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(205, 231, 255);
+  height: 80vh;
+  padding-top: 1em;
+}
+
+.home .logo {
+  height: 50px;
+  width: 50px;
+}
+
+.movies {
+    display: block;
+    text-align: center;
+}
+.movies button {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.selected {
+  position: relative ;
+  background: #4c81a9;
+	border-radius: 3px;
+  padding: 40px;
+  padding-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.people .container {
+    display: block;
+    text-align: center;
+}
+.people form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.locations {
+    display: block;
+    text-align: center;
+}
+.locations button {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
