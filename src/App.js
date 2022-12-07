@@ -14,12 +14,11 @@ function App() {
             <Icon.CameraReelsFill /> <span className="logo"></span>
           </Link>
           <div>
-            <Icon.Film />
-            <br />
+            <Icon.Film size={40} />
             <Link to="/movies">Movies</Link>
-            <Icon.PeopleFill />
+            <Icon.PeopleFill size={40} />
             <Link to="/people">People</Link>
-            <Icon.HouseDoorFill />
+            <Icon.HouseDoorFill size={40} />
             <Link to="/location">Location</Link>
           </div>
         </nav>

@@ -25,15 +25,17 @@ function People() {
 
   return (
     <div className="people">
-      <h3>Search for a Person</h3>
-      <Form onSubmit={findPeople}>
-        <input
-          type="text"
-          value={searchPeople}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <Button>Submit</Button>
-      </Form>
+      <div className="container">
+        <h3>Search for a Person</h3>
+        <Form onSubmit={findPeople}>
+          <input
+            type="text"
+            value={searchPeople}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <Button onClick={findPeople}>Submit</Button>
+        </Form>
+      </div>
       {searchResult ? (
         searchResult.length ? (
           searchResult.map((result) => (
@@ -47,8 +49,7 @@ function People() {
         ) : (
           <span>Not Found</span>
         )
-      ) : (null)
-      }
+      ) : null}
     </div>
   );
 }

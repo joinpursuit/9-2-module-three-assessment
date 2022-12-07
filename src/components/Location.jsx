@@ -32,7 +32,7 @@ function Location() {
   return (
     <div className="locations">
       <h3>List of Locations</h3>
-      <div>
+      <div className="container">
         <Button onClick={toggleShowButton}>
           {showLocations ? "Hide Locations" : "Show Locations"}
         </Button>
